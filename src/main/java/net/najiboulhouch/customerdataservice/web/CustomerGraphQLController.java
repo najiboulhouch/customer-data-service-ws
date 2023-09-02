@@ -29,7 +29,7 @@ public class CustomerGraphQLController {
     @QueryMapping
     public Customer customerById(@Argument Long id ){
         return customerRepository.findById(id).orElseThrow(
-               () -> new ResourceNotFoundException(String.format("Customer %s not found in DB" , id)));
+               () -> new ResourceNotFoundException(String.format("Customer %s not found" , id)));
     }
 
     @MutationMapping
