@@ -29,6 +29,7 @@ public class CustomerGraphQLController {
     @QueryMapping
     public Customer customerById(@Argument Long id ){
         System.out.println("Add a text for test");
+        System.out.println("Adding a texts");
         return customerRepository.findById(id).orElseThrow(
                () -> new ResourceNotFoundException(String.format("Customer %s not found" , id)));
     }
