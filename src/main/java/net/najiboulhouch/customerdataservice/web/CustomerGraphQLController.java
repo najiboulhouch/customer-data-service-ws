@@ -30,7 +30,6 @@ public class CustomerGraphQLController {
     public Customer customerById(@Argument Long id ){
         System.out.println("Add a text for test");
         System.out.println("Adding a texts");
-        System.out.println("message in feature branch");
         return customerRepository.findById(id).orElseThrow(
                () -> new ResourceNotFoundException(String.format("Customer %s not found" , id)));
     }
